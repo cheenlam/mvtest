@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="videoJS.css">
+    <script src="videoJS.js"></script>
+</head>
+
+<body>
+    <p>test video 1</p>
+    <video width="400" height="250" controls playsinline autoplay>
+        <source src="https://hls.cckgame.com/20230325/YvUn8Jjq/index.m3u8" type="application/x-mpegURL">
+    </video>
+
+    <p>test video 2</p>
+    <video id="my-video" class="video-js vjs-big-play-centered"><video>
+
+
+    <script>
+        const player = videojs('my-video', {
+            sources: [{ src: "https://hls.cckgame.com/20230325/YvUn8Jjq/index.m3u8" }],
+            width: "400px",
+            height: "250px",
+            controls: true
+        });
+
+    </script>
+
+</body>
+
+</html>
